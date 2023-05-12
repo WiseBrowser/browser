@@ -1,0 +1,29 @@
+{
+    "name": "browser",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": "https://github.com/WiseBrowser/browser",
+    "author": "pressjump",
+    "license": "MPL-2.0",
+    "dependencies": {
+      "gluon-build": "^1.0.0-rc.5"
+    },
+    "scripts": {
+      "build": "gluon build",
+      "build:ui": "gluon build --ui",
+      "bs": "pnpm build && pnpm start",
+      "bus": "pnpm build:ui && pnpm start",
+      "start": "pnpm clearStartupCache && gluon run",
+      "start:win": "gluon run",
+      "export": "gluon export-file",
+      "imp": "gluon import",
+      "clearProfile": "rm -rf engine/obj-x86_64-pc-linux-gnu/tmp/profile-default",
+      "clearStartupCache": "rm -rf engine/obj-x86_64-pc-linux-gnu/tmp/profile-default/startupCache",
+      "download": "gluon download",
+      "package": "gluon package",
+      "ff-version": "gluon ff-version",
+      "licenseCheck": "gluon license-check",
+      "gluon": "gluon",
+      "reset": "gluon reset"
+    }
+  }
