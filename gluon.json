@@ -10,7 +10,22 @@
   "buildOptions": {
     "windowsUseSymbolicLinks": false
   },
-  "addons": {},
+  "addons": {
+    "ublock": {
+      "platform": "github",
+      "id": "uBlock0@raymondhill.net",
+      "repo": "gorhill/uBlock",
+      "version": "1.49.2",
+      "fileGlob": "uBlock0_*.firefox(.signed)?.xpi"
+    },
+    "firefox-qr-generator": {
+      "id": "qr-generator@browser.fushra.com",
+      "platform": "github",
+      "repo": "pulse-browser/firefox-qr-generator",
+      "version": "v0.1.0",
+      "fileGlob": "release.zip"
+    }
+  },
   "brands": {},
   "license": {
     "ignoredFiles": [
