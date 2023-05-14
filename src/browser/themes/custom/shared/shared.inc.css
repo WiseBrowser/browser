@@ -1,0 +1,61 @@
+/* #PersonalToolbar {
+    display: none;
+} */
+
+#SidebarTabs {
+  text-shadow: none;
+  width: 270px;
+}
+
+#SidebarBookmarks {
+  text-shadow: none;
+  width: 270px;
+}
+
+.bookmark-item {
+  border-radius: 5px;
+  /* box 20x20 */
+  padding: 5px;
+  margin: 5px;
+}
+
+#sidebar-container {
+  background-color: Field;
+  color: FieldText;
+  /* make it so that the elemnts are in column */
+  display: flex;
+  flex-direction: column;
+  /* make it so that the elements are aligned to the top */
+  align-items: flex-start;
+  /* but make it so that the container extends max height  */
+  max-height: 100%;
+  width: 270px;
+}
+
+.tabbrowser-tab:not([pinned]){
+  max-width: 260px;
+}
+
+#nav-bar {
+  /* rounded on the top right and left */
+  border-radius: 10px 10px 0px 0px;
+  
+}
+
+/* Remove Firefox View. We remove this with config but we want to hide it in case the debugging value flips */
+/* We don't wanna remove firefox view, its just that its location is not great */
+#firefox-view-button {
+  display: none;
+}
+
+#TabsToolbar-customization-target {
+  flex-direction: column;
+}
+
+#hrline {
+  border-inline-start: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  padding-inline-start: calc(var(--tab-overflow-pinned-tabs-width) + 2px);
+  margin-inline-start: 2px;
+  width: 100%;
+}
+
