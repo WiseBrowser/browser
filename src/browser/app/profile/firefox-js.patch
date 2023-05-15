@@ -1,0 +1,11 @@
+diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
+index 56c8022ec4bbeda70e09c3b8780afcbf21ba0579..f6f676a4b708ddc01cd84366ea79a7758cc6cf07 100644
+--- a/browser/app/profile/firefox.js
++++ b/browser/app/profile/firefox.js
+@@ -2837,3 +2837,5 @@ pref("cookiebanners.ui.desktop.cfrVariant", 0);
+ #ifdef MOZ_ARTIFACT_BUILDS
+   pref("telemetry.fog.artifact_build", true);
+ #endif
++
++#include wise.js
+\ No newline at end of file
