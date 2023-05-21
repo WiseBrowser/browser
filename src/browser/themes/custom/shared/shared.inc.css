@@ -30,6 +30,8 @@
   /* but make it so that the container extends max height  */
   max-height: 100%;
   width: 270px;
+
+  
 }
 
 .tabbrowser-tab:not([pinned]){
@@ -58,4 +60,3 @@
   margin-inline-start: 2px;
   width: 100%;
 }
-
