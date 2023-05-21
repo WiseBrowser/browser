@@ -7,17 +7,16 @@
   width: 270px;
 }
 
-#SidebarBookmarks {
+/* #SidebarBookmarks {
   text-shadow: none;
   width: 270px;
 }
 
 .bookmark-item {
   border-radius: 5px;
-  /* box 20x20 */
   padding: 5px;
   margin: 5px;
-}
+} */
 
 #sidebar-container {
   background-color: Field;
@@ -35,7 +34,7 @@
 }
 
 .tabbrowser-tab:not([pinned]){
-  max-width: 260px;
+  max-width: 275px;
 }
 
 #nav-bar {
@@ -55,8 +54,28 @@
 }
 
 #hrline {
-  border-inline-start: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+  /* border-inline-start: 1px solid color-mix(in srgb, currentColor 25%, transparent);
   padding-inline-start: calc(var(--tab-overflow-pinned-tabs-width) + 2px);
   margin-inline-start: 2px;
+  width: 100%; */
+}
+
+#bottom-icons {
+  /* flew row each item 40x40 max  */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* make it so that they are smushed to the left */
+  align-items: flex-start;
+  /* put the box bottom-icons on the bottom of anything */
+  position: absolute;
+  bottom: 0;
+  /* make it so that the box is 100% of the width */
   width: 100%;
+  max-width: 275px;
+
+  
+ 
+  
+  
 }

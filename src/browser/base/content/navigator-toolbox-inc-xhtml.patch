@@ -1,5 +1,5 @@
 diff --git a/browser/base/content/navigator-toolbox.inc.xhtml b/browser/base/content/navigator-toolbox.inc.xhtml
-index 5013cfb685e7aa8b330d0ce2a06769360c643304..b134d2886f8328fc1a2d95c01886fbb4f1111f14 100644
+index 5013cfb685e7aa8b330d0ce2a06769360c643304..d69bf34551b48f7b37c3839c1cfd12c422033eb4 100644
 --- a/browser/base/content/navigator-toolbox.inc.xhtml
 +++ b/browser/base/content/navigator-toolbox.inc.xhtml
 @@ -14,7 +14,7 @@
@@ -107,10 +107,23 @@ index 5013cfb685e7aa8b330d0ce2a06769360c643304..b134d2886f8328fc1a2d95c01886fbb4
             customizationtarget="nav-bar-customization-target"
             overflowable="true"
             default-overflowbutton="nav-bar-overflow-button"
-@@ -500,9 +440,29 @@
+@@ -407,7 +347,8 @@
+         <toolbartabstop/>
+       </toolbaritem>
+ 
+-      <toolbarspring cui-areatype="toolbar" class="chromeclass-toolbar-additional"/>
++      <!-- After URL BAR -->
++      <!-- <toolbarspring cui-areatype="toolbar" class="chromeclass-toolbar-additional"/>
+ 
+       <toolbarbutton id="downloads-button"
+                      class="toolbarbutton-1 chromeclass-toolbar-additional"
+@@ -499,10 +440,31 @@
+                      badged="true"
                       consumeanchor="PanelUI-button"
                       data-l10n-id="appmenu-menu-button-closed2"/>
-     </toolbaritem>
+-    </toolbaritem>
++    </toolbaritem> -->
++    </hbox>
 +    <hbox class="titlebar-buttonbox-container" skipintoolbarset="true">
 +      <hbox class="titlebar-buttonbox titlebar-color">
 +        <toolbarbutton class="titlebar-button titlebar-min"
@@ -138,7 +151,7 @@ index 5013cfb685e7aa8b330d0ce2a06769360c643304..b134d2886f8328fc1a2d95c01886fbb4
             mode="icons"
             class="browser-toolbar chromeclass-directories"
             context="toolbar-context-menu"
-@@ -565,7 +525,7 @@
+@@ -565,7 +527,7 @@
          </toolbarbutton>
        </hbox>
      </toolbaritem>

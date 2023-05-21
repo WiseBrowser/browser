@@ -1,13 +1,13 @@
 diff --git a/browser/base/content/browser-box.inc.xhtml b/browser/base/content/browser-box.inc.xhtml
-index 7e711c9d9a16d801757952d322970646557cf43c..c8708c02bbfc0d996cc3fcfab2fd111fc5a1a66b 100644
+index 7e711c9d9a16d801757952d322970646557cf43c..acc38f3eb41141bd984b8ee84497b1a3679279dd 100644
 --- a/browser/base/content/browser-box.inc.xhtml
 +++ b/browser/base/content/browser-box.inc.xhtml
-@@ -16,6 +16,141 @@
+@@ -16,6 +16,238 @@
      </box>
      <browser id="sidebar" autoscroll="false" disablehistory="true" disablefullscreen="true" tooltip="aHTMLTooltip"/>
    </vbox>
 +  
-+
++  d
 +  <!-- Entire Sidebar -->
 +  <vbox id="sidebar-container">
 +    <vbox id="SidebarBookmarks">
@@ -77,7 +77,7 @@ index 7e711c9d9a16d801757952d322970646557cf43c..c8708c02bbfc0d996cc3fcfab2fd111f
 +      </toolbar>
 +    </vbox>
 +  
-+    <vbox id="SidebarTabs"  >
++    <vbox id="SidebarTabs">
 +      <hbox flex="1" align="end" class="toolbar-items">
 +        <toolbartabstop/>
 +        <hbox id="TabsToolbar-customization-target" flex="1">
@@ -115,7 +115,7 @@ index 7e711c9d9a16d801757952d322970646557cf43c..c8708c02bbfc0d996cc3fcfab2fd111f
 +
 +          <!-- Horizontal HR -->
 +          <html:div id="hrline"/>
-+
++          <toolbar id="bottom-icons" mode="icons">
 +          <toolbarbutton id="new-tab-button"
 +                        class="toolbarbutton-1 chromeclass-toolbar-additional"
 +                        data-l10n-id="tabs-toolbar-new-tab"
@@ -127,6 +127,103 @@ index 7e711c9d9a16d801757952d322970646557cf43c..c8708c02bbfc0d996cc3fcfab2fd111f
 +                        ondragenter="newTabButtonObserver.onDragOver(event)"
 +                        cui-areatype="toolbar"
 +                        removable="true"/>
++          
++           <toolbarspring cui-areatype="toolbar" class="chromeclass-toolbar-additional"/>
++
++      <toolbarbutton id="downloads-button"
++                     class="toolbarbutton-1 chromeclass-toolbar-additional"
++                     delegatesanchor="true"
++                     badged="true"
++                     key="key_openDownloads"
++                     onmousedown="DownloadsIndicatorView.onCommand(event);"
++                     onkeypress="DownloadsIndicatorView.onCommand(event);"
++                     ondrop="DownloadsIndicatorView.onDrop(event);"
++                     ondragover="DownloadsIndicatorView.onDragOver(event);"
++                     ondragenter="DownloadsIndicatorView.onDragOver(event);"
++                     data-l10n-id="navbar-downloads"
++                     removable="true"
++                     overflows="false"
++                     cui-areatype="toolbar"
++                     hidden="true"
++                     tooltip="dynamic-shortcut-tooltip">
++        <box id="downloads-indicator-anchor"
++               consumeanchor="downloads-button">
++          <image id="downloads-indicator-icon"/>
++        </box>
++        <box class="toolbarbutton-animatable-box" id="downloads-indicator-progress-outer">
++          <box id="downloads-indicator-progress-inner"/>
++        </box>
++        <box class="toolbarbutton-animatable-box" id="downloads-indicator-start-box">
++          <image class="toolbarbutton-animatable-image" id="downloads-indicator-start-image"/>
++        </box>
++        <box class="toolbarbutton-animatable-box" id="downloads-indicator-finish-box">
++          <image class="toolbarbutton-animatable-image" id="downloads-indicator-finish-image"/>
++        </box>
++      </toolbarbutton>
++
++      <toolbarbutton id="fxa-toolbar-menu-button" class="toolbarbutton-1 chromeclass-toolbar-additional subviewbutton-nav"
++                     badged="true"
++                     delegatesanchor="true"
++                     onmousedown="gSync.toggleAccountPanel(this, event)"
++                     onkeypress="gSync.toggleAccountPanel(this, event)"
++                     consumeanchor="fxa-toolbar-menu-button"
++                     closemenu="none"
++                     data-l10n-id="toolbar-button-fxaccount"
++                     cui-areatype="toolbar"
++                     removable="true">
++                     <vbox>
++                      <image id="fxa-avatar-image"/>
++                     </vbox>
++      </toolbarbutton>
++
++      <toolbarbutton id="unified-extensions-button"
++                     class="toolbarbutton-1"
++                     delegatesanchor="true"
++                     data-l10n-id="unified-extensions-button"
++                     hidden="true"
++                     onkeypress="gUnifiedExtensions.togglePanel(event)"
++                     onmousedown="gUnifiedExtensions.togglePanel(event)"
++                     overflows="false"
++                     removable="false"/>
++    
++
++    <toolbarbutton id="nav-bar-overflow-button"
++                   class="toolbarbutton-1 chromeclass-toolbar-additional overflow-button"
++                   delegatesanchor="true"
++                   skipintoolbarset="true"
++                   data-l10n-id="navbar-overflow">
++      <box class="toolbarbutton-animatable-box">
++        <image class="toolbarbutton-animatable-image"/>
++      </box>
++    </toolbarbutton>
++
++    <toolbaritem id="PanelUI-button"
++                 removable="false">
++      <toolbarbutton id="ion-button"
++                     class="toolbarbutton-1"
++                     delegatesanchor="true"
++                     hidden="true"
++                     badged="true"
++                     tooltiptext="Ion"
++                     onmousedown="switchToTabHavingURI('about:ion', true);"
++                     onkeypress="switchToTabHavingURI('about:ion', true);"/>
++      <toolbarbutton id="whats-new-menu-button"
++                     class="toolbarbutton-1"
++                     delegatesanchor="true"
++                     hidden="true"
++                     badged="true"
++                     onmousedown="PanelUI.showSubView('PanelUI-whatsNew', this, event);"
++                     onkeypress="PanelUI.showSubView('PanelUI-whatsNew', this, event);"/>
++      <toolbarbutton id="PanelUI-menu-button"
++                     class="toolbarbutton-1"
++                     delegatesanchor="true"
++                     badged="true"
++                     consumeanchor="PanelUI-button"
++                     data-l10n-id="appmenu-menu-button-closed2"/>
++    </toolbaritem>
++          </toolbar>
++    
++    
 +
 +          <!-- <toolbarbutton id="alltabs-button"
 +                        class="toolbarbutton-1 chromeclass-toolbar-additional tabs-alltabs-button"
