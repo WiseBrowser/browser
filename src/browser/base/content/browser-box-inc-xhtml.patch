@@ -1,13 +1,14 @@
 diff --git a/browser/base/content/browser-box.inc.xhtml b/browser/base/content/browser-box.inc.xhtml
-index 7e711c9d9a16d801757952d322970646557cf43c..acc38f3eb41141bd984b8ee84497b1a3679279dd 100644
+index 7e711c9d9a16d801757952d322970646557cf43c..df0e739e2a8b11001fa07b51d3b08be8cf8ff66a 100644
 --- a/browser/base/content/browser-box.inc.xhtml
 +++ b/browser/base/content/browser-box.inc.xhtml
-@@ -16,6 +16,238 @@
-     </box>
-     <browser id="sidebar" autoscroll="false" disablehistory="true" disablefullscreen="true" tooltip="aHTMLTooltip"/>
-   </vbox>
-+  
-+  d
+@@ -3,6 +3,239 @@
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/.
+ 
+ <hbox flex="1" id="browser">
++  <vbox id="workspace-container">
++    <vbox id="workspace-item">T</vbox>
++  </vbox>
 +  <!-- Entire Sidebar -->
 +  <vbox id="sidebar-container">
 +    <vbox id="SidebarBookmarks">
@@ -237,6 +238,14 @@ index 7e711c9d9a16d801757952d322970646557cf43c..acc38f3eb41141bd984b8ee84497b1a3
 +      </hbox>
 +    </vbox>
 +  </vbox>
++  <!-- Extension Sidebar -->
+   <vbox id="sidebar-box" hidden="true" class="chromeclass-extrachrome">
+     <box id="sidebar-header" align="center">
+       <toolbarbutton id="sidebar-switcher-target" class="tabbable">
+@@ -16,6 +249,7 @@
+     </box>
+     <browser id="sidebar" autoscroll="false" disablehistory="true" disablefullscreen="true" tooltip="aHTMLTooltip"/>
+   </vbox>
 +
    <splitter id="sidebar-splitter" class="chromeclass-extrachrome sidebar-splitter" resizebefore="sibling" resizeafter="none" hidden="true"/>
    <vbox id="appcontent" flex="1">

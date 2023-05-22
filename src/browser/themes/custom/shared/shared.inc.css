@@ -7,16 +7,53 @@
   width: 270px;
 }
 
-/* #SidebarBookmarks {
+#SidebarBookmarks {
   text-shadow: none;
   width: 270px;
 }
 
-.bookmark-item {
+/* .bookmark-item {
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
 } */
+
+#workspace-container {
+  width: 50px;
+  background-color: Field;
+  color: FieldText;
+  /* make it so that the elemnts are in column */
+  display: flex;
+  flex-direction: column;
+  /* make it so that the elements are aligned to the top */
+  align-items: flex-start;
+  /* but make it so that the container extends max height  */
+  max-height: 100%;
+  /* make it so that the container is 100% of the height */
+  height: 100%;
+}
+
+#workspace-item {
+  /* Make it rounded on the corners but not too rounded apple like rounded */
+  border-radius: 10px;
+
+  /* make it so that the button is 45px by 45px */
+  width: 40px;
+  height: 40px;
+  /* make it so that the button is 5px from the top and 5px from the left */
+  margin: 5px;
+  /* make it so that the button is 5px from the top and 5px from the left */
+  padding: 5px;
+
+  /* Make it so that the text inside is centered  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gray;
+
+
+  
+}
 
 #sidebar-container {
   background-color: Field;
@@ -29,8 +66,6 @@
   /* but make it so that the container extends max height  */
   max-height: 100%;
   width: 270px;
-
-  
 }
 
 .tabbrowser-tab:not([pinned]){
@@ -73,9 +108,4 @@
   /* make it so that the box is 100% of the width */
   width: 100%;
   max-width: 275px;
-
-  
- 
-  
-  
 }

@@ -16,3 +16,4 @@ user_pref(
     'browser.newtabpage.activity-stream.section.highlights.includePocket',
     false
 )
+user_pref('browser.tabs.firefox-view.enabled', false)
