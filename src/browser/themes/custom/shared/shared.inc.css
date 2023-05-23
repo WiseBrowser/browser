@@ -109,3 +109,21 @@
   width: 100%;
   max-width: 275px;
 }
+
+#browser {
+  background-color: Field;
+}
+
+#appcontent {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: Field;
+  margin: 8px;
+}
+
+
+
+
+
+
+
