@@ -1,0 +1,77 @@
+diff --git a/browser/themes/shared/preferences/preferences.css b/browser/themes/shared/preferences/preferences.css
+index 5563afb25774f0fdcd766a6e292a3373e7de4d98..a34aa86a1bae296adf3a6be9dabb1cb66c0f901e 100644
+--- a/browser/themes/shared/preferences/preferences.css
++++ b/browser/themes/shared/preferences/preferences.css
+@@ -195,6 +195,30 @@ checkbox {
+   overflow: visible;
+   min-height: auto;
+   padding: 1px; /* Adding padding around richlistitem in order to make entire keyboard focusing outline visible */
++
++  /* Flex row */
++  display: flex;
++  flex-direction: row;
++
++  /* Make it so that the spacing between items are very small */
++  justify-content: space-between;
++  
++  width: 100%;
++
++  margin: 0px 0 0;
++}
++
++#category-general {
++  min-height: auto;
++  margin-inline: 0px;
++}
++
++.category-icon {
++  width: 17px;
++}
++
++.category-name {
++  font-size: 1em;
+ }
+ 
+ #category-general > .category-icon {
+@@ -937,6 +961,7 @@ dialog > .sync-engines-list + hbox {
+   overflow-x: hidden;
+   overflow-y: auto;
+   position: relative;
++
+ }
+ 
+ @media (prefers-reduced-motion) {
+@@ -966,8 +991,9 @@ dialog > .sync-engines-list + hbox {
+ 
+ #policies-container,
+ #searchInput {
+-  min-height: 32px;
++  min-width: 100%;
+   margin: 20px 0 30px;
++  width: 100%;
+ }
+ 
+ #policies-container {
+@@ -1020,8 +1046,9 @@ dialog > .sync-engines-list + hbox {
+ }
+ 
+ .sticky-inner-container {
+-  flex: 1;
+-  max-width: var(--main-pane-width);
++  display: flex;
++  flex-direction: column;
++  width: 100%;
+ }
+ 
+ .search-tooltip {
+@@ -1498,3 +1525,9 @@ richlistitem .text-link:hover {
+     appearance: none;
+   }
+ }
++
++#mainsection {
++  /* column */
++  display: flex;
++  flex-direction: column;
++}
+\ No newline at end of file
