@@ -1,4 +1,5 @@
 <div align="center">
+<img src="https://raw.githubusercontent.com/WiseBrowser/assets/main/wiselogo.png" height="180" width="180">
 
 # Wise Browser
 A slick browser that provides productivity within a few clicks with vertical tabs. Currently the browser is not ready and shouldn't be used.
